@@ -93,14 +93,25 @@ class Index {
                     icon: "./app/assets/images/icon.icns",
                     category: "public.app-category.games",
                     identity: null,
-                    target: [{
-                        target: "dmg",
-                        arch: "universal"
+                    target: [
+                        {
+                            target: "dmg",
+                            arch: "universal"
+                        },
+                        {
+                            target: "zip",
+                            arch: "universal"
+                        },
+                    ],
+                    dmg: {
+                        background: null,
+                        window: {
+                            width: 540,
+                            height: 380,
+                        },
+                        size: 600, // Taille fixe pour éviter les erreurs de redimensionnement.
+                        format: "UDRW", // Force le format HFS+ pour plus de compatibilité.
                     },
-                    {
-                        target: "zip",
-                        arch: "universal"
-                    }]
                 },
                 linux: {
                     icon: "./app/assets/images/icon.png",
